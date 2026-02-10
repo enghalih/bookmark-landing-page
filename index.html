@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bookmark-landing-page</title>
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="src/script.js" defer></script>
+  </head>
+  <body class="text-blue-950">
+    <div
+      class="group max-w-276 mx-auto desktop:px-0 flex justify-between px-[clamp(2rem,calc(-0.482rem+12.411vw),10.688rem)] py-10 desktop:py-12"
+    >
+      <img
+        src="images/logo-bookmark.svg"
+        class="h-6 expanded:fixed expanded:z-30"
+        alt=""
+        id="logo"
+      />
+      <button
+        class="desktop:hidden expanded:fixed expanded:z-30 right-[clamp(2rem,calc(-0.482rem+12.411vw),10.688rem)]"
+        id="nav-button"
+        type="button"
+        aria-label="navigator button"
+        aria-expanded="false"
+      >
+        <img src="./images/icon-hamburger.svg" id="nav-button-image" alt="" />
+      </button>
+      <nav
+        class="hidden desktop:block child expanded:block expanded:fixed expanded:inset-0 expanded:z-20"
+      >
+        <div
+          class="expanded:bg-blue-950 expanded:w-full expanded:h-full expanded:opacity-95"
+        ></div>
+        <ul
+          class="flex gap-600 expanded:w-full expanded:px-[clamp(2rem,calc(-0.482rem+12.411vw),10.688rem)] preset-6 expanded:gap-300 md:expanded:gap-400 expanded:text-5 expanded:font-normal expanded:flex-col expanded:items-center expanded:absolute expanded:left-1/2 expanded:top-1/2 expanded:-translate-1/2 expanded:text-white"
+        >
+          <li
+            aria-hidden="true"
+            class="hidden expanded:block w-full h-px bg-white opacity-15"
+          ></li>
+          <li>
+            <a href="#">FEATURES</a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="hidden expanded:block w-full h-px bg-white opacity-15"
+          ></li>
+          <li>
+            <a href="#">PRICING</a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="hidden expanded:block w-full h-px bg-white opacity-15"
+          ></li>
+
+          <li>
+            <a href="#">CONTACT</a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="hidden expanded:block w-full h-px bg-white opacity-15"
+          ></li>
+
+          <li>
+            <a href="#" class="bg-red-400 text-white py-100 px-400">LOGIN</a>
+          </li>
+        </ul>
+
+        <ul class="hidden expanded:flex expanded:gap-500 expanded:fixed expanded:bottom-12 expanded:left-1/2 expanded:-translate-x-1/2">
+          <li>
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/icon-twitter.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main
+      class="grid desktop:grid-cols-2 gap-[clamp(3rem,calc(1.956rem+5.217vw),4.5rem)] desktop:gap-16.75 pt-13 desktop:pt-16 pb-16 desktop:pb-10"
+    >
+      <div class="relative w-full grid place-items-center desktop:order-2">
+        <img
+          class="relative z-10"
+          src="./images/illustration-hero.svg"
+          alt=""
+        />
+        <div
+          class="absolute bg-blue-600 w-2/3 max-h-90 aspect-3/2 left-1/3 bottom-0 rounded-l-full"
+        ></div>
+      </div>
+      <div
+        class="grid gap-300 content-center desktop:order-1 text-center desktop:text-left px-wrapper desktop:px-0 desktop:max-w-135 desktop:ml-auto"
+      >
+        <h2 class="preset-1-mb md:preset-1">A Simple Bookmark Manager</h2>
+        <p class="preset-2-mb-reg md:preset-4">
+          A clean and simple interface to organize your favourite websites. Open
+          a new browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div
+          class="preset-2-mb-med md:preset-6 flex gap-200 items-center justify-center desktop:justify-start"
+        >
+          <button
+            type="button"
+            class="bg-blue-600 text-white rounded-[5px] px-3 desktop:px-6 py-2.5"
+          >
+            Get it on Chrome
+          </button>
+          <button
+            type="button"
+            class="bg-grey-50 rounded-[5px] px-[24px] py-2.5"
+          >
+            Get it on Firefox
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="grid gap-900">
+      <section
+        class="pt-16 desktop:pt-10 grid gap-200 px-wrapper text-center desktop:max-w-130 desktop:mx-auto desktop:px-0"
+      >
+        <h2 class="preset-1-mb md:preset-1">Features</h2>
+        <p class="preset-2-mb-reg md:preset-4">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </section>
+
+      <section
+        class="grid desktop:grid-cols-2 gap-[clamp(3rem,calc(1.956rem+5.217vw),4.5rem)] desktop:gap-16.75 pb-16 desktop:pb-10"
+      >
+        <div
+          id="tabs"
+          class="flex flex-col justify-center md:flex-row md:col-span-full"
+        >
+          <button
+            type="button"
+            data-index="0"
+            aria-selected="false"
+            class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
+          >
+            Simple Bookmarking
+          </button>
+          <button
+            type="button"
+            data-index="1"
+            aria-selected="false"
+            class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
+          >
+            Speedy Searching
+          </button>
+          <button
+            type="button"
+            data-index="2"
+            aria-selected="true"
+            class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
+          >
+            Easy Sharing
+          </button>
+        </div>
+        <div class="relative w-full grid place-items-center">
+          <img
+            class="px-4 h-[clamp(17.625rem,calc(12.511rem+25.568vw),31.688rem)] relative z-10 pb-[clamp(3.438rem,calc(2.415rem+5.114vw),6.25rem)] desktop:justify-self-end"
+            src="./images/illustration-features-tab-1.svg"
+            alt=""
+            id="features-image"
+          />
+          <div
+            class="absolute bg-blue-600 w-2/3 max-h-90 aspect-3/2 right-1/3 bottom-0 rounded-r-full"
+          ></div>
+        </div>
+        <div
+          class="grid gap-300 content-center text-center desktop:text-left px-wrapper desktop:pl-0 desktop:pr-41"
+        >
+          <h2 id="features-title" class="preset-1-mb md:preset-1">
+            A Simple Bookmark Manager
+          </h2>
+          <p
+            id="features-description"
+            class="preset-2-mb-reg md:preset-4 h-fit"
+          >
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div
+            class="preset-2-mb-med md:preset-6 flex gap-200 items-center justify-center desktop:justify-start"
+          >
+            <button
+              type="button"
+              class="bg-blue-600 text-white rounded-[5px] px-3 desktop:px-6 py-2.5"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section
+      class="px-wrapper text-center grid gap-500 desktop:max-w-240 md:mx-auto md:px-0"
+    >
+      <div class="grid gap-200">
+        <h2 class="preset-1-mb md:preset-1">Download the extension</h2>
+        <p class="preset-2-mb-reg md:preset-4">
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize.
+        </p>
+      </div>
+
+      <div
+        class="grid lg:grid-cols-3 gap-500 lg:gap-0 justify-items-center items-center desktop:gap-400"
+      >
+        <article
+          class="my-shadow grid justify-center w-70 md:max-desktop:w-50 py-400 md:max-desktop:py-300"
+        >
+          <div
+            class="grid gap-400 md:max-desktop:gap-200 pb-300 md:max-desktop:pb-200 border-b-4 border-[hsla(231,58%,55%,0.2)] border-dotted"
+          >
+            <img src="./images/logo-chrome.svg" class="mx-auto" alt="" />
+            <div>
+              <h3 class="preset-2-mb-med md:preset-3">Add to Chrome</h3>
+              <p class="preset-2-mb-reg md:preset-4">Minimum version 62</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="bg-blue-600 mt-300 md:max-desktop:mt-200 text-white rounded-[5px] px-3 desktop:px-6 py-2.5 preset-2-mb-med md:preset-6"
+          >
+            Add & Install Extension
+          </button>
+        </article>
+        <article
+          class="my-shadow grid justify-center w-70 md:max-desktop:w-50 py-400 md:max-desktop:py-300 desktop:mt-500"
+        >
+          <div
+            class="grid gap-400 md:max-desktop:gap-200 pb-300 md:max-desktop:pb-200 border-b-4 border-[hsla(231,58%,55%,0.2)] border-dotted"
+          >
+            <img src="./images/logo-firefox.svg" class="mx-auto" alt="" />
+            <div>
+              <h3 class="preset-2-mb-med md:preset-3">Add to Firefox</h3>
+              <p class="preset-2-mb-reg md:preset-4">Minimum version 55</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="bg-blue-600 mt-300 md:max-desktop:mt-200 text-white rounded-[5px] px-3 desktop:px-6 py-2.5 preset-2-mb-med md:preset-6"
+          >
+            Add & Install Extension
+          </button>
+        </article>
+        <article
+          class="my-shadow grid justify-center w-70 md:max-desktop:w-50 py-400 md:max-desktop:py-300 desktop:mt-20"
+        >
+          <div
+            class="grid gap-400 md:max-desktop:gap-200 pb-300 md:max-desktop:pb-200 border-b-4 border-[hsla(231,58%,55%,0.2)] border-dotted"
+          >
+            <img src="./images/logo-opera.svg" class="mx-auto" alt="" />
+            <div>
+              <h3 class="preset-2-mb-med md:preset-3">Add to Opera</h3>
+              <p class="preset-2-mb-reg md:preset-4">Minimum version 46</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="bg-blue-600 mt-300 md:max-desktop:mt-200 text-white rounded-[5px] px-3 desktop:px-6 py-2.5 preset-2-mb-med md:preset-6"
+          >
+            Add & Install Extension
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section
+      class="pt-16 desktop:pt-10 pb-[clamp(4rem,calc(3.386rem+3.068vw),5.688rem)] grid gap-700 px-wrapper text-center desktop:max-w-135 desktop:mx-auto desktop:px-0"
+    >
+      <div class="gap-4 grid">
+        <h2 class="preset-1-mb md:preset-1">Frequently Asked Questions</h2>
+        <p class="preset-2-mb-reg md:preset-4">
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+      </div>
+
+      <div class="grid gap-200 text-start">
+        <details open class="grid open:gap-200">
+          <summary
+            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+          >
+            What is a Bookmark?
+            <img src="./images/icon-arrow.svg" alt="" />
+          </summary>
+          <p class="preset-2-mb-reg md:preset-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+          </p>
+        </details>
+        <div class="w-full h-px bg-blue-950 opacity-15"></div>
+        <details class="grid open:gap-200">
+          <summary
+            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+          >
+            How can I request a new browser?
+            <img src="./images/icon-arrow.svg" alt="" />
+          </summary>
+          <p class="preset-2-mb-reg md:preset-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+          </p>
+        </details>
+        <div class="w-full h-px bg-blue-950 opacity-15"></div>
+        <details class="grid open:gap-200">
+          <summary
+            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+          >
+            Is there a mobile app?
+            <img src="./images/icon-arrow.svg" alt="" />
+          </summary>
+          <p class="preset-2-mb-reg md:preset-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+          </p>
+        </details>
+        <div class="w-full h-px bg-blue-950 opacity-15"></div>
+        <details class="grid open:gap-200">
+          <summary
+            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+          >
+            What about other Chromium browsers?
+            <img src="./images/icon-arrow.svg" alt="" />
+          </summary>
+          <p class="preset-2-mb-reg md:preset-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+          </p>
+        </details>
+      </div>
+
+      <button
+        type="button"
+        class="bg-blue-600 text-white rounded-[5px] px-3 desktop:px-6 py-2.5 preset-2-mb-med md:preset-6 w-fit mx-auto"
+      >
+        More Info
+      </button>
+    </section>
+
+    <section
+      class="mt-[clamp(4rem,calc(3.386rem+3.068vw),5.688rem)] px-wrapper bg-blue-600 text-white md:py-700 py-12 grid gap-400 text-center justify-center"
+    >
+      <div class="max-w-110 mx-auto">
+        <p class="preset-3-mb md:preset-6 letter-spa">35,000+ ALREADY JOINED</p>
+        <h2 class="preset-1-mb md:preset-2">
+          Stay up-to-date with what we’re doing
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-200 max-w-110">
+        <input
+          type="text"
+          placeholder="Enter your email address"
+          class="bg-white md:col-span-2 text-black px-200 rounded-[5px] placeholder:opacity-15 md:px-300 py-3"
+        />
+        <button type="button" class="bg-red-400 py-2">Contact Us</button>
+      </div>
+    </section>
+
+    <footer
+      class="bg-blue-950 px-wrapper text-white py-8 md:py-400 flex flex-col gap-600 md:flex-row md:justify-between justify-center items-center md:gap-0"
+    >
+      <img src="./images/logo-bookmark-light.svg" alt="" />
+      <ul
+        class="flex gap-300 md:flex-row md:text-normal flex-col preset-2-mb-reg md:preset-6 text-center"
+      >
+        <li><a href="#">FEATURES</a></li>
+        <li><a href="#">PRICING</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <ul class="flex gap-500 md:gap-300">
+        <li>
+          <a href="#">
+            <img src="./images/icon-facebook.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/icon-twitter.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

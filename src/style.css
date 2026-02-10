@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-950: #242a45;
+  --color-blue-600: #5267df;
+  --color-grey-600: #5b6074;
+  --color-grey-50: #f7f7f7;
+  --color-red-400: #fa5959;
+
+  --spacing-0: 0;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-900: 4.5rem;
+  --spacing-1500: 7.5rem;
+  --spacing-wrapper: clamp(1.938rem, calc(-1.671rem + 18.043vw), 7.125rem);
+
+  --font-rubik: "Rubik", sans-serif;
+
+  --breakpoint-desktop: 77rem;
+}
+
+/* DESKTOP PRESETS */
+@utility preset-1 {
+  @apply font-rubik font-medium text-[48px] leading-[1.1] tracking-[0px];
+}
+@utility preset-2 {
+  @apply font-rubik font-medium text-[32px] leading-[1.25] tracking-[-0.1px];
+}
+@utility preset-3 {
+  @apply font-rubik font-medium text-[20px] leading-[1.2] tracking-[0.25px];
+}
+@utility preset-4 {
+  @apply font-rubik font-normal text-[18px] leading-[1.55] tracking-[0px];
+}
+@utility preset-5-light {
+  @apply font-rubik font-light text-[16px] leading-[2.25] tracking-[0.5px];
+}
+@utility preset-5-reg {
+  @apply font-rubik font-normal text-[16px] leading-[1.1] tracking-[0.5px];
+}
+@utility preset-6 {
+  @apply font-rubik font-medium text-[14px] leading-[2] tracking-[0.25px];
+}
+
+/* MOBILE PRESETS */
+@utility preset-1-mb {
+  @apply font-rubik font-medium text-[30px] leading-[1.35] tracking-[0px];
+}
+@utility preset-2-mb-reg {
+  @apply font-rubik font-normal text-[15px] leading-[2] tracking-[0px];
+}
+@utility preset-2-mb-med {
+  @apply font-rubik font-medium text-[15px] leading-[2] tracking-[0px];
+}
+@utility preset-2-mb-light {
+  @apply font-rubik font-light text-[15px] leading-[2] tracking-[0px];
+}
+@utility preset-3-mb {
+  @apply font-rubik font-medium text-[12px] leading-[3] tracking-[5px];
+}
+@utility preset-4-mb {
+  @apply font-rubik font-medium italic text-[10px] leading-[1.2] tracking-[0.25px];
+}
+@utility wrapper {
+  @apply max-w-[1440px] mx-auto px-400;
+}
+@utility my-shadow {
+  box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.05);
+}
+
+@custom-variant expanded (.group:has(button[aria-expanded="true"]) &);
