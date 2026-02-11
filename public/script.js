@@ -3,7 +3,6 @@ const tabContents = tabs.querySelectorAll("button");
 const navButton = document.getElementById("nav-button");
 
 navButton?.addEventListener("click", (event) => {
-  console.log('tombol ditekn')
   if (event.currentTarget.getAttribute("aria-expanded") === "true") {
     event.currentTarget.setAttribute("aria-expanded", "false");
     document.getElementById("nav-button-image").src = "./images/icon-hamburger.svg";
@@ -47,7 +46,7 @@ tabs?.addEventListener("click", (event) => {
   });
   button.setAttribute("aria-selected", "true");
 
-  changeContent(parseInt(button.dataset.index));
+  changeContent(+button.dataset.index);
 });
 
 function changeContent(index) {

@@ -30,7 +30,7 @@
         class="desktop:hidden expanded:fixed expanded:z-30 right-[clamp(2rem,calc(-0.482rem+12.411vw),10.688rem)]"
         id="nav-button"
         type="button"
-        aria-label="navigator button"
+        aria-label="toggle navigator button"
         aria-expanded="false"
       >
         <img src="./images/icon-hamburger.svg" id="nav-button-image" alt="" />
@@ -76,15 +76,19 @@
           </li>
         </ul>
 
-        <ul class="hidden expanded:flex expanded:gap-500 expanded:fixed expanded:bottom-12 expanded:left-1/2 expanded:-translate-x-1/2">
+        <ul
+          class="hidden expanded:flex expanded:gap-500 expanded:fixed expanded:bottom-12 expanded:left-1/2 expanded:-translate-x-1/2"
+        >
           <li>
             <a href="#">
               <img src="./images/icon-facebook.svg" alt="" />
+              <span class="sr-only">Visit our facebook</span>
             </a>
           </li>
           <li>
             <a href="#">
               <img src="./images/icon-twitter.svg" alt="" />
+              <span class="sr-only">Visit our twitter</span>
             </a>
           </li>
         </ul>
@@ -107,7 +111,7 @@
       <div
         class="grid gap-300 content-center desktop:order-1 text-center desktop:text-left px-wrapper desktop:px-0 desktop:max-w-135 desktop:ml-auto"
       >
-        <h2 class="preset-1-mb md:preset-1">A Simple Bookmark Manager</h2>
+        <h1 class="preset-1-mb md:preset-1">A Simple Bookmark Manager</h1>
         <p class="preset-2-mb-reg md:preset-4">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
@@ -146,35 +150,45 @@
       <section
         class="grid desktop:grid-cols-2 gap-[clamp(3rem,calc(1.956rem+5.217vw),4.5rem)] desktop:gap-16.75 pb-16 desktop:pb-10"
       >
-        <div
+        <ul
+          role="tablist"
           id="tabs"
           class="flex flex-col justify-center md:flex-row md:col-span-full"
         >
-          <button
-            type="button"
-            data-index="0"
-            aria-selected="false"
-            class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
-          >
-            Simple Bookmarking
-          </button>
-          <button
-            type="button"
-            data-index="1"
-            aria-selected="false"
-            class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
-          >
-            Speedy Searching
-          </button>
-          <button
-            type="button"
-            data-index="2"
-            aria-selected="true"
-            class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
-          >
-            Easy Sharing
-          </button>
-        </div>
+          <li>
+            <button
+              role="tab"
+              type="button"
+              data-index="0"
+              aria-selected="false"
+              class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
+            >
+              Simple Bookmarking
+            </button>
+          </li>
+          <li>
+            <button
+              role="tab"
+              type="button"
+              data-index="1"
+              aria-selected="false"
+              class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
+            >
+              Speedy Searching
+            </button>
+          </li>
+          <li>
+            <button
+              role="tab"
+              type="button"
+              data-index="2"
+              aria-selected="true"
+              class="p-200 border-b border-hsla(231,58%,55%,0.2) aria-selected:after:content-[''] relative aria-selected:after:bg-red-400 aria-selected:after:absolute aria-selected:after:h-1 aria-selected:after:w-full aria-selected:after:inset-x-0 aria-selected:after:bottom-0"
+            >
+              Easy Sharing
+            </button>
+          </li>
+        </ul>
         <div class="relative w-full grid place-items-center">
           <img
             class="px-4 h-[clamp(17.625rem,calc(12.511rem+25.568vw),31.688rem)] relative z-10 pb-[clamp(3.438rem,calc(2.415rem+5.114vw),6.25rem)] desktop:justify-self-end"
@@ -299,59 +313,68 @@
         </p>
       </div>
 
-      <div class="grid gap-200 text-start">
-        <details open class="grid open:gap-200">
-          <summary
-            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
-          >
-            What is a Bookmark?
-            <img src="./images/icon-arrow.svg" alt="" />
-          </summary>
-          <p class="preset-2-mb-reg md:preset-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
-          </p>
-        </details>
-        <div class="w-full h-px bg-blue-950 opacity-15"></div>
-        <details class="grid open:gap-200">
-          <summary
-            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
-          >
-            How can I request a new browser?
-            <img src="./images/icon-arrow.svg" alt="" />
-          </summary>
-          <p class="preset-2-mb-reg md:preset-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
-          </p>
-        </details>
-        <div class="w-full h-px bg-blue-950 opacity-15"></div>
-        <details class="grid open:gap-200">
-          <summary
-            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
-          >
-            Is there a mobile app?
-            <img src="./images/icon-arrow.svg" alt="" />
-          </summary>
-          <p class="preset-2-mb-reg md:preset-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
-          </p>
-        </details>
-        <div class="w-full h-px bg-blue-950 opacity-15"></div>
-        <details class="grid open:gap-200">
-          <summary
-            class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
-          >
-            What about other Chromium browsers?
-            <img src="./images/icon-arrow.svg" alt="" />
-          </summary>
-          <p class="preset-2-mb-reg md:preset-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
-          </p>
-        </details>
-      </div>
+      <ul class="grid gap-200 text-start">
+        <li>
+          <details open class="grid open:gap-200">
+            <summary
+              class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+            >
+              What is a Bookmark?
+              <img src="./images/icon-arrow.svg" alt="" />
+            </summary>
+            <p class="preset-2-mb-reg md:preset-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+            </p>
+          </details>
+        </li>
+        <li class="w-full h-px bg-blue-950 opacity-15"></li>
+
+        <li>
+          <details class="grid open:gap-200">
+            <summary
+              class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+            >
+              How can I request a new browser?
+              <img src="./images/icon-arrow.svg" alt="" />
+            </summary>
+            <p class="preset-2-mb-reg md:preset-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+            </p>
+          </details>
+        </li>
+        <li class="w-full h-px bg-blue-950 opacity-15"></li>
+        <li>
+          <details class="grid open:gap-200">
+            <summary
+              class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+            >
+              Is there a mobile app?
+              <img src="./images/icon-arrow.svg" alt="" />
+            </summary>
+            <p class="preset-2-mb-reg md:preset-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+            </p>
+          </details>
+        </li>
+        <li class="w-full h-px bg-blue-950 opacity-15"></li>
+        <li>
+          <details class="grid open:gap-200">
+            <summary
+              class="preset-2-mb-reg md:preset-4 cursor-pointer flex justify-between items-center"
+            >
+              What about other Chromium browsers?
+              <img src="./images/icon-arrow.svg" alt="" />
+            </summary>
+            <p class="preset-2-mb-reg md:preset-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+            </p>
+          </details>
+        </li>
+      </ul>
 
       <button
         type="button"
@@ -395,11 +418,13 @@
         <li>
           <a href="#">
             <img src="./images/icon-facebook.svg" alt="" />
+            <span class="sr-only">Visit our facebook</span>
           </a>
         </li>
         <li>
           <a href="#">
             <img src="./images/icon-twitter.svg" alt="" />
+            <span class="sr-only">Visit our twitter</span>
           </a>
         </li>
       </ul>
